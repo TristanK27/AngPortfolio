@@ -4,7 +4,11 @@
 	"name": "Angular dev container",
 	"dockerFile": "Dockerfile",
 	"appPort": [ "8080:4200" ],
+	
+	
+	"workspaceMount": "src=${localWorkspaceFolder},dst=/usr/src/app,type=bind,consistency=cached",
 	"workspaceFolder": "/usr/src/app",
+	"postCreateCommand": "npm install",
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/bash"
